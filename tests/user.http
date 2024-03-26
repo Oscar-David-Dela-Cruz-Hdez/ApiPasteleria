@@ -1,0 +1,68 @@
+###Consultar todos los usuarios
+GET http://localhost:4000/users
+
+###Buscar un usuario por ID
+GET http://localhost:3000/users/65cbbfd39f137967b83ce927
+
+###Buscar un usuario por correo
+GET http://localhost:3000/users/email/juan1.perez@ejemplo.com
+
+### Crear un usuario
+POST http://localhost:4000/users/
+Content-Type: application/json
+
+{
+    "nombre": {
+            "nombre": "José de Jesús",
+            "apP": "Esparza",
+            "apM": "Vargas"
+        },
+    "telefono": "1234567590",
+    "datosCuenta": {
+        "email": "josej_31var@hotmail.com",
+        "password": "987654321",
+        "preguntaRecuperacion": {
+            "idPregunta": "65c80b2bc818e4a10f2010d7",
+            "respuesta": "rojo"
+        },
+        "rol":"usuario"
+    }
+}
+
+### Actualizar un usuario completamente
+PUT http://localhost:3000/users/65cbbfd39f137967b83ce927
+Content-Type: application/json
+
+{
+    "nombre":{
+        "nombre": "Juan",
+        "apP": "Pérez",
+        "apM": "López"
+    },
+    "telefono": "1234567891",
+    "email": "juan2.perez@ejemplo.com",
+    "userName": "juanperez",
+    "password": "12345678",
+    "idPregunta": "65c80b2bc818e4a10f2010d7",
+    "respuesta": "rojo"
+}
+
+### Modificar parcialmente un usuario
+PATCH  http://localhost:3000/users/65cbbfd39f137967b83ce927
+Content-Type: application/json
+
+{
+    "password": "87654321"
+}
+
+### Eliminar un usuario
+DELETE http://localhost:3000/users/65cbcab49f137967b83ce931
+
+###
+GET http://localhost:4000/products
+
+###
+GET http://localhost:4000/questions
+
+###
+GET http://localhost:4000/devices

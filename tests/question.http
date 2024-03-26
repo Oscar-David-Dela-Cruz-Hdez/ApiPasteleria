@@ -1,0 +1,18 @@
+### Consultar preguntas
+GET http://localhost:3000/questions
+
+### Autentificación
+POST http://localhost:4000/auth
+Content-Type: application/json
+
+{
+  "email": "josej_29var@hotmail.com",
+  "password": "987654321"
+}
+
+### traer pregunta de usuario
+POST http://localhost:3000/recovery/question
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWQwMTY2ZDc4MjJkMTU5Y2Y0NzUxOWEiLCJlbWFpbCI6Impvc2VqXzI5dmFyQGhvdG1haWwuY29tIiwicmVjdXBlcmFyIjp0cnVlLCJpYXQiOjE3MDg0ODUwMTcsImV4cCI6MTcwODQ4ODYxN30.x5sjPxnpGj6I120eQANrCEq5zdqCyMnUSM8iRnTo9HU
+
+###
+GET http://localhost:4000/productos
